@@ -1,21 +1,23 @@
-int startX = 0;
-int startY = 150; 
-int endX = 0;
-int endY = 150; 
+int startX = mouseX;
+int startY = 0; 
+int endX = mouseX;
+int endY = 0; 
 
 void setup()
 {
-  size(300,300);
-  strokeWeight(5);
+  size(600,600);
+  strokeWeight(3);
   background(0);
 }
 void draw()
 {
-	stroke(255);
-	while (endX < 300)
+	stroke((int)(Math.random() * 256), (int)(Math.random() * 256), (int)(Math.random() * 256));
+	background(0);	
+	while (endY < 600)
 	{
-		endX = startX + (int) (Math.random() * 10);
-		endY = startY + (int) (Math.random() * 19) - 9;
+		//stroke((int)(Math.random() * 256), (int)(Math.random() * 256), (int)(Math.random() * 256));
+		endX = startX + (int) (Math.random() * 19) - 9;
+		endY = startY + (int) (Math.random() * 10);
 		line(startX, startY, endX, endY);
 		startX = endX;
 		startY = endY; // == or =
@@ -23,9 +25,9 @@ void draw()
 }
 void mousePressed()
 {
-	startX = 0;
-	startY = 150;
-	endX = 0;
-	endY = 150;
+	startX = mouseX; 
+	startY = 0;
+	endX = mouseX;
+	endY = 0;
 }
 
