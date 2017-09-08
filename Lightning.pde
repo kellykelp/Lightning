@@ -1,18 +1,23 @@
-int startX = mouseX;
-int startY = 0; 
-int endX = mouseX;
-int endY = 0; 
+int startX = 400;
+int startY = 70; 
+int endX = 400;
+int endY = 70; 
 
 void setup()
 {
   size(600,600);
-  strokeWeight(3);
+  strokeWeight(2);
   background(0);
 }
 void draw()
 {
 	stroke((int)(Math.random() * 256), (int)(Math.random() * 256), (int)(Math.random() * 256));
-	background(0);	
+	//background(0);
+	fill(#858072);
+	rect(390, 70, 20, 20);	
+	ellipse(400, 0, 150, 150);
+	rect(150, -10, 200, 70);
+
 	while (endY < 600)
 	{
 		//stroke((int)(Math.random() * 256), (int)(Math.random() * 256), (int)(Math.random() * 256));
@@ -25,9 +30,9 @@ void draw()
 }
 void mousePressed()
 {
-	startX = mouseX; 
-	startY = 0;
-	endX = mouseX;
-	endY = 0;
+	startX = 400; 
+	startY = 70;
+	endX = 400;
+	endY = 70;
 }
 
